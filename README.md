@@ -13,6 +13,10 @@ Google Firebase is a Google-backed application development software that enables
 For the buttons and other styling components material-ui was made use of. 
 Material Design is an Android-oriented design language created by Google, supporting onscreen touch experiences via cue-rich features and natural motions that mimic real-world objects.
 
+### Disclaimer 
+
+There are some issues regarding the uploading of comments to the firebase DataBase. Feel free to debug and fix the issues and reach back to me. :)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
