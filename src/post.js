@@ -14,6 +14,7 @@ function Post({postId,user,username,caption,imgUrl}) {
             .collection("posts")
             .doc(postId)
             .collection("comments")
+            .orderBy("timestamp","asc")
             .onSnapshot((snapshot)=>{
                 setComments(snapshot.docs.map((doc)=>doc.data()))
             })  
@@ -25,7 +26,7 @@ function Post({postId,user,username,caption,imgUrl}) {
     
     const postComment = (event) =>{
         event.preventDefault();
-        db.collection("posts").doc(postId).collection("comments").orderBy("timestamp","asc").add({
+        db.collection("posts").doc(postId).collection("comments").add({
             text: comment,
             username: user.displayName,
             timestamp: firebase.firestore.FieldValue.serverTimestamp() 
